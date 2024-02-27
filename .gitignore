@@ -1,0 +1,10 @@
+myenv/
+
+rockchallenge/authentication/migrations
+rockchallenge/investments/migrations
+rockchallenge/investments/migrations
+rockchallenge/userincome/migrations
+rockchallenge/userpreferences/migrations
+
+db.sqlite3
+

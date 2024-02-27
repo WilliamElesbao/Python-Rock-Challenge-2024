@@ -1,0 +1,70 @@
+<!-- @format -->
+
+{% extends "base_auth.html" %} {% load static %} {% block content %}
+
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <div class="card mt-5">
+      <div class="card-body">
+        <div class="card-title py-3">
+          <h4>Cadastre-se</h4>
+        </div>
+
+        <form action="{% url 'register' %}" method="post">
+          {% csrf_token %} {% include 'partials/messages.html' %}
+          <div class="form-group">
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              class="form-control form-control-sm"
+              id="usernameField"
+              value="{{ fieldValues.username }}"/>
+          </div>
+          <div class="invalid-feedback" style="display: none"></div>
+          <p class="text-sm text-success usernameSuccessOutput"></p>
+
+          <div class="form-group">
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              class="form-control form-control-sm"
+              id="emailField" 
+              
+              value="{{ fieldValues.email }}"/>
+          </div>
+          <div
+            class="emailFeedbackArea invalid-feedback"
+            style="display: none"></div>
+          <p class="text-sm text-success emailSuccessOutput"></p>
+
+          <div class="form-group">
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              class="form-control form-control-sm"
+              id="passwordField" />
+          </div>
+          <small class="float-right py-3 showPasswordToggle">MOSTRAR</small>
+
+          <input
+            type="submit"
+            value="Castrar-se"
+            class="btn btn-block btn-primary submit-btn" />
+        </form>
+        <div class="container d-flex flex-column">
+          <span class="text-lead lead">Já tem uma conta ?</span><a href="{% url 'login' %}" class="text-lead lead">Ir para área de Login</a>
+  
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="col-md-4"></div>
+</div>
+
+<script src="{% static 'js/register.js' %}"></script>
+{% endblock content %}

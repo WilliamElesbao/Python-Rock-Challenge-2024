@@ -1,0 +1,63 @@
+<!-- @format -->
+
+{% extends "base.html" %} {% block content %}
+<div class="container mt-4">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'investments' %}">Investimentos</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">
+        Adicionar um Investimento
+      </li>
+    </ol>
+  </nav>
+
+  <div class="card">
+    <div class="card-body">
+      <form action="{% url 'add-investments' %}" method="post">
+        {% include 'partials/messages.html' %}
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="">Valor</label>
+          <input
+            type="number"
+            class="form-control form-control-sm"
+            name="amount"
+            value="{{values.amount}}"/>
+        </div>
+        <div class="form-group">
+          <label for="">Descrição</label>
+          <input
+            type="text"
+            class="form-control form-control-sm"
+            name="description"
+            value="{{values.description}}"/>
+        </div>
+        <div class="form-group">
+          <label for="">Incorporadora</label>
+          <select class="form-control" name="category" id="">
+            {% for category in categories %}
+            <option name="category" value="{{category.name}}">
+              {{category.name}}
+            </option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="">Data do Investimento</label>
+          <input
+            type="date"
+            value="{{values.date}}"
+            class="form-control form-control-sm"
+            name="investment_date" />
+        </div>
+        <button
+          type="submit"
+          value="Investir"
+          class="btn btn-primary btn-primary-sm" >Investir<i class="fa-solid fa-dollar-sign px-2"></i></button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

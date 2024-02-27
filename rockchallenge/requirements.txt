@@ -1,0 +1,14 @@
+asgiref==3.7.2
+chardet==5.2.0
+Django==5.0.2
+et-xmlfile==1.1.0
+mysql-connector-python==8.3.0
+mysqlclient==2.2.4
+openpyxl==3.1.2
+pillow==10.2.0
+psycopg2==2.9.9
+PyMySQL==1.1.0
+reportlab==4.1.0
+sqlparse==0.4.4
+tzdata==2024.1
+validate_email==1.3
