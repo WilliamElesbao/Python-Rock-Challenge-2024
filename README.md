@@ -4,39 +4,6 @@
 
 - A plataforma Rock Challenge foi desenvolvida para atender às necessidades do usuário no gerenciamento financeiro, especialmente focado em investimentos no mercado imobiliário. A plataforma oferece os seguintes recursos:
 
-Este projeto foi desenvolvido em Python, utilizando o framework Django.
-###### Utilizado as seguintes tecnologias:
-    -    Python(Framework - Django)
-    -    HTML
-    -    CSS (Framework - Bootstrap)
-    -    JavaScript
-    -    SQL (sqlite3)
-    -    IDE (VSCode)
-    
-- O Sistema pode ser integrado com o MySQL Workbench, por exemplo, realizando as seguintes modificações:
-  ###### No arquivo settings.py da aplicação, em DATABASES:
-  ###### Altere isso:
-      DATABASES = {
-            'default': {
-                'ENGINE': 'django.db.backends.sqlite3',
-                'NAME': BASE_DIR / 'db.sqlite3',
-            }
-      }
-  
-  ###### Por isso:
-  ###### Lembrando que é necessário realizar a criação do banco de dados para que o mesmo possa ser encontrado para realizar a criação das tabelas:
-        DATABASES = {
-            'default': {
-                'ENGINE': 'django.db.backends.mysql',
-                'NAME': 'seu_banco_de_dados',
-                'USER': 'seu_usuario',
-                'PASSWORD': 'sua_senha',
-                'HOST': 'localhost',
-                'PORT': '3306',
-            }
-        }
-
-
 ###### Imagens do Projeto:
 | ![Tela de Login](./rockchallenge/rockchallenge/static/img/00-login.png) | ![Tela de Cadastro](./rockchallenge/rockchallenge/static/img/01-register.png) | ![Tela de Login 2](./rockchallenge/rockchallenge/static/img/02-login-in.png) |
 |-----|-----|-----|
@@ -139,6 +106,38 @@ Este projeto foi desenvolvido em Python, utilizando o framework Django.
 
 - Acesse a aplicação em: http://127.0.0.1:8000/
     -   Caso não tenha uma conta, clique em "Criar uma conta nova". Preenchido os campos de criação de uma nova conta, você será redirecionado para a tela de login, basta fazer o login para acessar o sistema.
+ 
+Este projeto foi desenvolvido em Python, utilizando o framework Django.
+###### Utilizado as seguintes tecnologias:
+    -    Python(Framework - Django)
+    -    HTML
+    -    CSS (Framework - Bootstrap)
+    -    JavaScript
+    -    SQL (sqlite3)
+    -    IDE (VSCode)
+    
+- O Sistema pode ser integrado com o MySQL Workbench, por exemplo, realizando as seguintes modificações:
+  ###### No arquivo settings.py da aplicação, em DATABASES:
+  ###### Altere isso:
+      DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': BASE_DIR / 'db.sqlite3',
+            }
+      }
+  
+  ###### Por isso:
+  ###### Lembrando que é necessário realizar a criação do banco de dados para que o mesmo possa ser encontrado para realizar a criação das tabelas:
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.mysql',
+                'NAME': 'seu_banco_de_dados',
+                'USER': 'seu_usuario',
+                'PASSWORD': 'sua_senha',
+                'HOST': 'localhost',
+                'PORT': '3306',
+            }
+        }
 
 #### Features Adicionais
 
