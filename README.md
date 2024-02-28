@@ -2,8 +2,40 @@
 
 ### Descrição do Projeto
 
-Este projeto em Python, utilizando o framework Django.
-A plataforma Rock Challenge foi desenvolvida para atender às necessidades do usuário no gerenciamento financeiro, especialmente focado em investimentos no mercado imobiliário. A plataforma oferece os seguintes recursos:
+- A plataforma Rock Challenge foi desenvolvida para atender às necessidades do usuário no gerenciamento financeiro, especialmente focado em investimentos no mercado imobiliário. A plataforma oferece os seguintes recursos:
+
+Este projeto foi desenvolvido em Python, utilizando o framework Django.
+###### Utilizado as seguintes tecnologias:
+    -    Python(Framework - Django)
+    -    HTML
+    -    CSS (Framework - Bootstrap)
+    -    JavaScript
+    -    SQL (sqlite3)
+    -    IDE (VSCode)
+    
+- O Sistema pode ser integrado com o MySQL Workbench, por exemplo, realizando as seguintes modificações:
+  ###### No arquivo settings.py da aplicação, em DATABASES:
+  ###### Altere isso:
+      DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': BASE_DIR / 'db.sqlite3',
+            }
+      }
+  
+  ###### Por isso:
+  ###### Lembrando que é necessário realizar a criação do banco de dados para que o mesmo possa ser encontrado para realizar a criação das tabelas:
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.mysql',
+                'NAME': 'seu_banco_de_dados',
+                'USER': 'seu_usuario',
+                'PASSWORD': 'sua_senha',
+                'HOST': 'localhost',
+                'PORT': '3306',
+            }
+        }
+
 
 ###### Imagens do Projeto:
 | ![Tela de Login](./rockchallenge/rockchallenge/static/img/00-login.png) | ![Tela de Cadastro](./rockchallenge/rockchallenge/static/img/01-register.png) | ![Tela de Login 2](./rockchallenge/rockchallenge/static/img/02-login-in.png) |
@@ -64,26 +96,31 @@ A plataforma Rock Challenge foi desenvolvida para atender às necessidades do us
     - Utilizei gráficos para fornecer análises visuais sobre as principais incorporadoras associadas aos investimentos dos usuários.
 
 #### Rodando o projeto Localmente
-- Clonar o Repositório:
-`git clone https://github.com/WilliamElesbao/Python-Rock-Challenge-2024.git`
-`cd Python-Rock-Challenge-2024`
-<br>
+##### Clonar o Repositório:
+    git clone https://github.com/WilliamElesbao/Python-Rock-Challenge-2024.git
 
-- Instalar Dependências:
-`pip install -r requirements.txt`
-<br>
+##### Acessa a pasta do projeto        
+    cd Python-Rock-Challenge-2024
 
-- Configurar Banco de Dados:
-`python manage.py migrate`
-<br>
+##### Crie um ambiente virtual para instalar as dependências:
+    python -m venv nome_do_seu_ambiente_virtual
 
-- Criar Superusuário:
-`python manage.py createsuperuser`
-<br>
+##### Caso esteja usando o terminal Bash, utilize o seguinte comando para ativar seu ambiente virtual:
+    source nome_do_seu_ambiente_virtual/Scripts/Activate
 
-- Executar o Servidor de Desenvolvimento:
-`p manage.py runserver`
-<br>
+##### Instalar Dependências:
+    pip install -r requirements.txt
+
+##### Acesse o diretório do Projeto para poder usar o manager.py.
+
+##### Configurar Banco de Dados:
+    python manage.py migrate
+
+##### Criar Superusuário:
+    python manage.py createsuperuser
+    
+##### Executar o Servidor de Desenvolvimento:
+    python manage.py runserver
 
 - Interface administrativa em http://127.0.0.1:8000/admin/
     - Acesse a interface administrativa com o super usuário que você criou.
