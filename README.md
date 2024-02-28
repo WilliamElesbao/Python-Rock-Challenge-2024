@@ -112,8 +112,12 @@ Este projeto foi desenvolvido em Python, utilizando o framework Django.
     pip install -r requirements.txt
 
 ##### Acesse o diretório do Projeto para poder usar o manager.py.
+    cd rockchallenge
 
 ##### Configurar Banco de Dados:
+    python manage.py makemigrations investments
+    python manage.py makemigrations userincome
+    python manage.py makemigrations userpreferences
     python manage.py migrate
 
 ##### Criar Superusuário:
