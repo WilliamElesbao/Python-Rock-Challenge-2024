@@ -78,7 +78,7 @@
 ##### Instalar Dependências:
     pip install -r requirements.txt
 
-##### Acesse o diretório do Projeto para poder usar o manager.py.
+##### Acesse o diretório do Projeto para poder usar o manage.py.
     cd rockchallenge
 
 ##### Configurar Banco de Dados:
@@ -96,7 +96,7 @@
 - Interface administrativa em http://127.0.0.1:8000/admin/
     - Acesse a interface administrativa com o super usuário que você criou.
     ![Tela de Login](./rockchallenge/rockchallenge/static/img/10-admin.png)
-    -  Necessário criar as "categorias" ou "incorporadoras" pela interface adiministrativa.
+    -  Necessário criar as "categorias" ou "incorporadoras" pela interface administrativa.
     - Clique no botão "Add" para acessar a pagina para adicionar uma nova categoria.
     ![Tela de Login](./rockchallenge/rockchallenge/static/img/11-criar-cat.png)
     - Crie e Salve sua nova categoria.
